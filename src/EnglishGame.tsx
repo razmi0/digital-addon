@@ -108,7 +108,7 @@ const EnglishGame = () => {
   ];
 
   return (
-    <div>
+    <div style={{ padding: "2rem" }}>
       <h1>English Game</h1>
       <h2>Thematics</h2>
       <ul>
