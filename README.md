@@ -82,3 +82,19 @@ je créer un jeux de société dans un univers digital d'internet mais j'essaye 
 ```txt
 
 ```
+
+### Game cards description :
+
+- [Infra] : Infrastructure are permanent cards that you can buy with ressource. They will help you generate more ressources, or give you the ability to attack or defend against other players. They can be upgraded or downgraded by action cards.
+- [Action] : Action cards are temporary cards that can be used to attack or defend against other players. They can be used to upgrade or downgrade infrastructure cards or for exemple to steal resources from other players..
+
+- paragraphe d'introduction
+- objectif du joueur
+- description génrale de tout lles type de carete
+- regle ( deja fait)
+- strategie
+- les objectifs du jeu ( les exemples de choses que les jouerus vont dire sans faire expres et qui ont du sens.)
+
+objectives :
+
+- Construire son internet le plus grand et prospere possible. Faire les bons choix strategique pour croitre et gagner.
