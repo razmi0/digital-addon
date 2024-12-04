@@ -1,5 +1,5 @@
+import { useTheme } from "@/hooks/useTheme";
 import { cn } from "@/lib/utils";
-import { useTheme } from "./ThemeProvider";
 
 export default function Header() {
   const { theme } = useTheme();

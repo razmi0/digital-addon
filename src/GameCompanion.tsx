@@ -124,25 +124,15 @@ export default function GameCompanion() {
             </Article>
           </TabsContent>
 
-          {/* PROGRESS */}
-          {/* PROGRESS */}
-          {/* PROGRESS */}
+          {/* PLAYERS */}
+          {/* PLAYERS */}
+          {/* PLAYERS */}
 
-          <TabsContent value="progress" className="space-y-4">
+          <TabsContent value="players" className="space-y-4">
             <Article className={cardStyles}>
               <ArticleContent className="p-6 relative">
                 <div className="absolute inset-0 bg-noise"></div>
-                <h2 className={h2Styles}>Game Progress</h2>
-                <div className="space-y-4">
-                  <div className="h-2 bg-slate-700/50 rounded-full overflow-hidden relative">
-                    <div className={cn("h-full w-1/3 rounded-full dark:bg-cyan-500/50 bg-cyan-500/30")} />
-                  </div>
-                  <div className="flex justify-between text-sm text-slate-400">
-                    <span>Round 1</span>
-                    <span>Round 2</span>
-                    <span>Final Round</span>
-                  </div>
-                </div>
+                <h2 className={h2Styles}>Players</h2>
               </ArticleContent>
             </Article>
           </TabsContent>

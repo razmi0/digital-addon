@@ -1,6 +1,6 @@
+import { useTheme } from "@/hooks/useTheme";
 import { cn } from "@/lib/utils";
 import { Moon, Sun } from "lucide-react";
-import { useTheme } from "./ThemeProvider";
 import { Button } from "./ui/button";
 
 export default function ThemeButton() {
