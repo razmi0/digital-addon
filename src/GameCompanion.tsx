@@ -6,6 +6,7 @@ import { BookIcon, CalculatorIcon, ScrollIcon, WalletCardsIcon } from "lucide-re
 import { Button } from "@/components/ui/button";
 import { Card as Article, CardContent as ArticleContent } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import Card from "./components/Card";
 import Header from "./components/Header";
 import Rules from "./components/Rules";
 import ThemeButton from "./components/ThemeButton";
@@ -75,20 +76,7 @@ export default function GameCompanion() {
                 <h2 className={h2Styles}>Card Gallery</h2>
                 <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
                   {Array.from({ length: 6 }).map((_, i) => (
-                    <div
-                      key={i}
-                      className={cn(
-                        "aspect-[3/4] rounded-lg p-4 flex items-center justify-center",
-                        "border transition-colors cursor-pointer group",
-                        "dark:bg-gradient-to-br dark:from-slate-700/50 dark:to-slate-800/50 dark:border-cyan-500/20 dark:hover:border-cyan-500/40"
-                      )}>
-                      <span
-                        className={
-                          "dark:text-cyan-400 dark:group-hover:text-cyan-300 text-cyan-600 group-hover:text-cyan-500"
-                        }>
-                        Card {i + 1}
-                      </span>
-                    </div>
+                    <Card key={i} n={i} />
                   ))}
                 </div>
               </ArticleContent>
