@@ -1,5 +1,5 @@
 import { cn } from "@/lib/utils";
-import { useTheme } from "./theme-provider";
+import { useTheme } from "./ThemeProvider";
 
 export default function Header() {
   const { theme } = useTheme();

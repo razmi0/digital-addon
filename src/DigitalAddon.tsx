@@ -1,5 +1,5 @@
 import { StrictMode } from "react";
-import { ThemeProvider } from "./components/theme-provider";
+import { ThemeProvider } from "./components/ThemeProvider";
 import GameCompanion from "./GameCompanion";
 
 export default function DigitalAddon() {
