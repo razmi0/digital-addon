@@ -1,94 +1,149 @@
 {
-  "dev_cards": [
+  "startIds": {
+    "action": 1,
+    "infra": 5,
+    "ressource": 13
+  },
+  "cards": [
     {
-      "name": "route",
-      "term": "bande-passante",
-      "category": "infra",
-      "description": "permet de faire circuler des données entre serveur"
+      "id": 1,
+      "title": "bug",
+      "type": "action",
+      "cost": {
+        "server": 0,
+        "octet": 0
+      },
+      "score": 0
     },
     {
-      "name": "entrepot",
-      "term": "base de donnée",
-      "category": "infra",
-      "description": "stocke des informations"
+      "id": 2,
+      "title": "downgrade-attack",
+      "type": "action",
+      "cost": {
+        "server": 0,
+        "octet": 0
+      },
+      "score": 0
     },
     {
-      "name": "porte muraille",
-      "term": "pare-feu",
-      "category": "infra",
-      "description": "protège de 1/2/3 hacker"
+      "id": 3,
+      "title": "hacker",
+      "type": "action",
+      "cost": {
+        "server": 0,
+        "octet": 0
+      },
+      "score": 0
     },
     {
-      "name": "hopital",
-      "term": "sys de maintenance",
-      "category": "infra",
-      "description": "previent de 1/2/3 bug"
+      "id": 4,
+      "title": "https",
+      "type": "action",
+      "cost": {
+        "server": 0,
+        "octet": 0
+      },
+      "score": 0
     },
     {
-      "name": "brigant",
-      "term": "bug",
-      "category": "action",
-      "description": "bloque un batiment un tour"
+      "id": 5,
+      "title": "api",
+      "type": "infra",
+      "cost": {
+        "server": 2,
+        "octet": 2
+      },
+      "score": 3
     },
     {
-      "name": "marché",
-      "term": "API",
-      "category": "infra",
-      "description": "permet echange avec d'autres joueurs"
+      "id": 6,
+      "title": "database",
+      "type": "infra",
+      "cost": {
+        "server": 2,
+        "octet": 1
+      },
+      "score": 1
     },
     {
-      "name": "architecte office",
-      "term": "baie de serveur",
-      "category": "infra",
-      "description": "genere des serveur/ par tour"
+      "id": 7,
+      "title": "firewall",
+      "type": "infra",
+      "cost": {
+        "server": 1,
+        "octet": 2
+      },
+      "score": 2
     },
     {
-      "name": "bibliothèque",
-      "term": "moteur de recherche",
-      "category": "infra",
-      "description": "permet de piocher plus d'action"
+      "id": 8,
+      "title": "bandwidth",
+      "type": "infra",
+      "cost": {
+        "server": 1,
+        "octet": 1
+      },
+      "score": 1
     },
     {
-      "name": "postoffice",
-      "term": "serveur smtp",
-      "category": "infra",
-      "description": "upgrade le marché"
+      "id": 9,
+      "title": "maintenance system",
+      "type": "infra",
+      "cost": {
+        "server": 1,
+        "octet": 2
+      },
+      "score": 2
     },
     {
-      "name": "voleur",
-      "term": "hacker",
-      "category": "action",
-      "description": "pique des octets"
+      "id": 10,
+      "title": "search engine",
+      "type": "infra",
+      "cost": {
+        "server": 0,
+        "octet": 3
+      },
+      "score": 1
     },
     {
-      "name": "garde",
-      "term": "HTTPS",
-      "category": "action",
-      "description": "upgrade une route en HTTPS"
+      "id": 11,
+      "title": "server bay",
+      "type": "infra",
+      "cost": {
+        "server": 0,
+        "octet": 2
+      },
+      "score": 1
     },
     {
-      "name": "embuscade",
-      "term": "downgrade attack",
-      "category": "action",
-      "description": "downgrade une route en HTTP"
+      "id": 12,
+      "title": "smtp",
+      "type": "infra",
+      "cost": {
+        "server": 2,
+        "octet": 4
+      },
+      "score": 8
     },
     {
-      "name": "charette de blé",
-      "term": "optimisation",
-      "category": "action",
-      "description": "donne des octets"
+      "id": 13,
+      "title": "octet",
+      "type": "ressource",
+      "cost": {
+        "server": 0,
+        "octet": 0
+      },
+      "score": 1
     },
     {
-      "name": "blé",
-      "term": "octet",
-      "category": "ressources",
-      "description": "ressource principal"
-    },
-    {
-      "name": "maison",
-      "term": "serveur",
-      "category": "ressources",
-      "description": "ressource principal"
+      "id": 14,
+      "title": "server",
+      "type": "ressource",
+      "cost": {
+        "server": 0,
+        "octet": 0
+      },
+      "score": 1
     }
   ]
 }

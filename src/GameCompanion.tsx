@@ -1,15 +1,13 @@
-"use client";
-
-import { cn } from "@/lib/utils";
-import { BookIcon, CalculatorIcon, ScrollIcon, WalletCardsIcon } from "lucide-react";
-
 import { Button } from "@/components/ui/button";
 import { Card as Article, CardContent as ArticleContent } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { cn } from "@/lib/utils";
+import { BookIcon, CalculatorIcon, ScrollIcon, WalletCardsIcon } from "lucide-react";
 import Card from "./components/Card";
 import Header from "./components/Header";
 import Rules from "./components/Rules";
 import ThemeButton from "./components/ThemeButton";
+import { cards } from "./data.json" assert { type: "json" };
 
 export default function GameCompanion() {
   const tabStyles =
@@ -75,8 +73,8 @@ export default function GameCompanion() {
                 <div className="absolute inset-0 bg-noise"></div>
                 <h2 className={h2Styles}>Card Gallery</h2>
                 <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-                  {Array.from({ length: 6 }).map((_, i) => (
-                    <Card key={i} n={i} />
+                  {cards.map((card, i) => (
+                    <Card key={i} content={card} />
                   ))}
                 </div>
               </ArticleContent>
