@@ -1,5 +1,5 @@
 import { PlayerContext } from "@/hooks/contexts/PlayerContext";
-import React, { useState, useCallback } from "react";
+import React, { useCallback, useState } from "react";
 
 export type Player = {
   id: string;
@@ -13,8 +13,18 @@ export type Player = {
 export const PlayerProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const [players, setPlayers] = useState<Player[]>([]);
 
-  const addPlayer = useCallback((player: Omit<Player, "id">) => {
-    setPlayers((prevPlayers) => [...prevPlayers, { ...player, id: Date.now().toString() }]);
+  const addPlayer = useCallback((player: Pick<Player, "name">) => {
+    setPlayers((prevPlayers) => [
+      ...prevPlayers,
+      {
+        id: Date.now().toString(),
+        ...player,
+        score: 0,
+        infras: 0,
+        resources: 0,
+        actions: 0,
+      },
+    ]);
   }, []);
 
   const updatePlayer = useCallback((id: string, updatedPlayer: Partial<Player>) => {

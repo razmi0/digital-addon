@@ -3,7 +3,7 @@ import { createContext } from "react";
 
 type PlayerContextType = {
   players: Player[];
-  addPlayer: (player: Omit<Player, "id">) => void;
+  addPlayer: (player: Pick<Player, "name">) => void;
   updatePlayer: (id: string, player: Partial<Player>) => void;
   deletePlayer: (id: string) => void;
 };

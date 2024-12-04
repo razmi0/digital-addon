@@ -5,6 +5,7 @@ import { cn } from "@/lib/utils";
 import { BookIcon, CalculatorIcon, ScrollIcon, WalletCardsIcon } from "lucide-react";
 import Card from "./components/Card";
 import Header from "./components/Header";
+import Players from "./components/Players";
 import Rules from "./components/Rules";
 import ThemeButton from "./components/ThemeButton";
 import { cards } from "./data.json" assert { type: "json" };
@@ -44,9 +45,9 @@ export default function GameCompanion() {
               <CalculatorIcon className="h-4 w-4 mr-2" />
               Score
             </TabsTrigger>
-            <TabsTrigger value="progress" className={tabStyles}>
+            <TabsTrigger value="players" className={tabStyles}>
               <ScrollIcon className="h-4 w-4 mr-2" />
-              Progress
+              Players
             </TabsTrigger>
           </TabsList>
 
@@ -133,6 +134,7 @@ export default function GameCompanion() {
               <ArticleContent className="p-6 relative">
                 <div className="absolute inset-0 bg-noise"></div>
                 <h2 className={h2Styles}>Players</h2>
+                <Players />
               </ArticleContent>
             </Article>
           </TabsContent>
