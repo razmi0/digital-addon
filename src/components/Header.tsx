@@ -39,6 +39,7 @@ export default function Header() {
             Digital Game Companion
           </span>
         </h1>
+        <audio src="/assets/audio/ambient.mp3" autoPlay loop />
       </div>
     </div>
   );
