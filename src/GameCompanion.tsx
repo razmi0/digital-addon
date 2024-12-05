@@ -90,7 +90,6 @@ export default function GameCompanion() {
             <Article className={cardStyles}>
               <ArticleContent className="p-6 relative">
                 <div className="absolute inset-0 bg-noise"></div>
-                <h2 className={h2Styles}>Players</h2>
                 <Players />
               </ArticleContent>
             </Article>

@@ -44,7 +44,7 @@ export default function Card({ content }: CardType) {
     <div
       className={cn(
         "aspect-[3/4] rounded-lg pb-3 flex flex-col items-center justify-center",
-        "border transition-colors cursor-pointer group",
+        "border transition-all cursor-pointer group hover:scale-95",
         "dark:bg-gradient-to-br dark:from-slate-700/50 dark:to-slate-800/50 dark:border-cyan-500/20 dark:hover:border-cyan-500/40"
       )}>
       {/* <button onMouseDown={togglePopover}> */}

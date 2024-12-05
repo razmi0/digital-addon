@@ -164,3 +164,10 @@ The oldest player starts.
 - [x] - cartes
 - [x] - livret
 - [x] - illustration boite
+
+## missing cards
+
+- [ ] optimisation not on the website
+- [ ] draw only infra cards !
+
+## video script

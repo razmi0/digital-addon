@@ -64,7 +64,7 @@
 
 .bg-noise {
   background-image: url("/assets/noise.svg"); /* Path to the noise image */
-  opacity: 0.5; /* Adjust the intensity of the noise */
+  opacity: 1; /* Adjust the intensity of the noise */
   mix-blend-mode: overlay; /* Blends the noise with the gradient */
   pointer-events: none; /* Ensures it doesn't interfere with user interaction */
 }
