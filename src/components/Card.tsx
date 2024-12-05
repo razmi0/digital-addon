@@ -58,7 +58,7 @@ export default function Card({ content }: CardType) {
             />
           </PopoverTrigger>
           <PopoverContent
-            className="w-80 text-center bg-background text-foreground bg-gradient-to-b from-slate-100 to-white dark:bg-gradient-to-b dark:from-slate-900 dark:to-slate-950"
+            className="w-80 text-center bg-background text-foreground bg-gradient-to-b from-slate-100 to-white dark:bg-gradient-to-b dark:from-slate-900 dark:to-slate-950 border-cyan-500/20 dark:border-cyan-500/40"
             onInteractOutside={() => openCb[1](false)}>
             <ChoosePlayer content={content} update={update} />
           </PopoverContent>

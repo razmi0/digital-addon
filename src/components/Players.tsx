@@ -3,9 +3,10 @@ import { Input } from "@/components/ui/input";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 import { useState } from "react";
 import { usePlayer } from "../hooks/usePlayer";
+import { Player } from "@/providers/PlayerProvider";
 
 export default function Players() {
-  const { players, deletePlayer, addPlayer } = usePlayer();
+  const { players, deletePlayer, addPlayer, updatePlayer } = usePlayer();
   const [newPlayerName, setNewPlayerName] = useState("");
 
   const handleCreatePlayer = (e: React.FormEvent) => {
@@ -14,6 +15,14 @@ export default function Players() {
       addPlayer({ name: newPlayerName });
       setNewPlayerName("");
     }
+  };
+
+  const incrementScore = (player: Player) => {
+    updatePlayer(player.id, { score: player.score + 1 });
+  };
+
+  const decrementScore = (player: Player) => {
+    updatePlayer(player.id, { score: player.score - 1 });
   };
 
   return (
@@ -46,7 +55,15 @@ export default function Players() {
           {players.map((player) => (
             <TableRow key={player.id}>
               <TableCell>{player.name}</TableCell>
-              <TableCell>{player.score}</TableCell>
+              <TableCell className="flex items-center gap-2">
+                <Button variant="outline" size="sm" onClick={() => decrementScore(player)}>
+                  -
+                </Button>
+                {player.score}
+                <Button variant="outline" size="sm" onClick={() => incrementScore(player)}>
+                  +
+                </Button>
+              </TableCell>
               <TableCell>{player.infras}</TableCell>
               <TableCell>{player.resources}</TableCell>
               <TableCell>{player.actions}</TableCell>
