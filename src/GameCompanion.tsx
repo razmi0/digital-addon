@@ -3,7 +3,7 @@ import { Card as Article, CardContent as ArticleContent } from "@/components/ui/
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { cn } from "@/lib/utils";
 import { BookIcon, CalculatorIcon, ScrollIcon, WalletCardsIcon } from "lucide-react";
-import Card from "./components/Card";
+import Card, { CardType } from "./components/Card";
 import Header from "./components/Header";
 import Players from "./components/Players";
 import Rules from "./components/Rules";
@@ -74,7 +74,7 @@ export default function GameCompanion() {
                 <div className="absolute inset-0 bg-noise"></div>
                 <h2 className={h2Styles}>Card Gallery</h2>
                 <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-                  {cards.map((card, i) => (
+                  {(cards as CardType["content"][]).map((card, i) => (
                     <Card key={i} content={card} />
                   ))}
                 </div>
