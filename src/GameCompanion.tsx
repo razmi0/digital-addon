@@ -8,6 +8,7 @@ import Header from "./components/Header";
 import Players from "./components/Players";
 import Rules from "./components/Rules";
 import ThemeButton from "./components/ThemeButton";
+import { Toaster } from "./components/ui/sonner";
 import { cards } from "./data.json" assert { type: "json" };
 
 export default function GameCompanion() {
@@ -139,6 +140,7 @@ export default function GameCompanion() {
             </Article>
           </TabsContent>
         </Tabs>
+        <Toaster className="bg-background text-foreground bg-gradient-to-b from-slate-100 to-white dark:bg-gradient-to-b dark:from-slate-900 dark:to-slate-950" />
       </main>
     </div>
   );

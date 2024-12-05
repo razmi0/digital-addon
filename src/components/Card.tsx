@@ -3,6 +3,7 @@ import { cn } from "@/lib/utils";
 import { Player } from "@/providers/PlayerProvider";
 import { DatabaseIcon, ServerIcon, TrophyIcon } from "lucide-react";
 import { useCallback, useState } from "react";
+import { toast } from "sonner";
 import { ChoosePlayer } from "./ChoosePlayer";
 import { Popover, PopoverContent, PopoverTrigger } from "./ui/popover";
 
@@ -34,6 +35,7 @@ export default function Card({ content }: CardType) {
         actions: type === "action" ? player.actions + 1 : player.actions,
         infras: type === "infra" ? player.infras + 1 : player.infras,
       });
+      toast.success(`Card ${title} has been succesfully added to ${player.name}`);
     },
     [cost, score, title, type, updatePlayer]
   );
@@ -55,7 +57,9 @@ export default function Card({ content }: CardType) {
               className="w-full h-full object-cover rounded-tl-lg rounded-tr-lg opacity-95"
             />
           </PopoverTrigger>
-          <PopoverContent className="w-80" onInteractOutside={() => openCb[1](false)}>
+          <PopoverContent
+            className="w-80 text-center bg-background text-foreground bg-gradient-to-b from-slate-100 to-white dark:bg-gradient-to-b dark:from-slate-900 dark:to-slate-950"
+            onInteractOutside={() => openCb[1](false)}>
             <ChoosePlayer content={content} update={update} />
           </PopoverContent>
         </Popover>

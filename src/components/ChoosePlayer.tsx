@@ -9,8 +9,16 @@ export function ChoosePlayer({ content, update }: CardType & { update: (player: 
 
   const { cost, score, title, type } = content;
 
+  if (players.length === 0)
+    return (
+      <div>
+        <p>No players available</p>
+        <p>You can add them in the players tab</p>
+      </div>
+    );
+
   return (
-    <div className="grid gap-4">
+    <div className="grid gap-4 ">
       <div className="space-y-2">
         <h4 className="font-medium leading-none">
           Add
