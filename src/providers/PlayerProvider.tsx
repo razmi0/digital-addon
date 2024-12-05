@@ -1,4 +1,5 @@
 import { PlayerContext } from "@/hooks/contexts/PlayerContext";
+import useStorage from "@/hooks/useStorage";
 import React, { useCallback, useState } from "react";
 
 export type Player = {
@@ -11,7 +12,8 @@ export type Player = {
 };
 
 export const PlayerProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-  const [players, setPlayers] = useState<Player[]>([]);
+  const { load, save } = useStorage();
+  const [players, setPlayers] = useState<Player[]>(load() || []);
 
   const addPlayer = useCallback((player: Pick<Player, "name">) => {
     setPlayers((prevPlayers) => [
@@ -36,6 +38,8 @@ export const PlayerProvider: React.FC<{ children: React.ReactNode }> = ({ childr
   const deletePlayer = useCallback((id: string) => {
     setPlayers((prevPlayers) => prevPlayers.filter((player) => player.id !== id));
   }, []);
+
+  save(players);
 
   return (
     <PlayerContext.Provider value={{ players, addPlayer, updatePlayer, deletePlayer }}>
