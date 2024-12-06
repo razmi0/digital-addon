@@ -1,9 +1,9 @@
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
+import { Player } from "@/providers/PlayerProvider";
 import { useState } from "react";
 import { usePlayer } from "../hooks/usePlayer";
-import { Player } from "@/providers/PlayerProvider";
 
 export default function Players() {
   const { players, deletePlayer, addPlayer, updatePlayer } = usePlayer();
@@ -37,7 +37,12 @@ export default function Players() {
           placeholder="Enter player name"
           className="flex-grow"
         />
-        <Button type="submit">Add Player</Button>
+        <Button
+          type="submit"
+          variant="outline"
+          className="bg-white focus-visible:ring-2 focus-visible:ring-cyan-950 dark:border-cyan-800 dark:bg-slate-900/80 dark:ring-offset-cyan-950 dark:focus-visible:ring-cyan-300">
+          Add Player
+        </Button>
       </form>
 
       <Table>
@@ -56,11 +61,17 @@ export default function Players() {
             <TableRow key={player.id}>
               <TableCell>{player.name}</TableCell>
               <TableCell className="flex items-center gap-2">
-                <Button variant="outline" size="sm" onClick={() => decrementScore(player)}>
+                <Button
+                  className="bg-white text-black focus-visible:ring-2 focus-visible:ring-cyan-950 dark:border-cyan-800 dark:bg-slate-900/80 dark:ring-offset-cyan-950 dark:focus-visible:ring-cyan-300 dark:text-white"
+                  size="sm"
+                  onClick={() => decrementScore(player)}>
                   -
                 </Button>
                 {player.score}
-                <Button variant="outline" size="sm" onClick={() => incrementScore(player)}>
+                <Button
+                  className="bg-white text-black focus-visible:ring-2 focus-visible:ring-cyan-950 dark:border-cyan-800 dark:bg-slate-900/80 dark:ring-offset-cyan-950 dark:focus-visible:ring-cyan-300 dark:text-white"
+                  size="sm"
+                  onClick={() => incrementScore(player)}>
                   +
                 </Button>
               </TableCell>

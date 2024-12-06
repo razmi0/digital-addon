@@ -29,10 +29,14 @@ export default function GameCompanion() {
         <Tabs defaultValue="rules" className="space-y-6 flex justify-center">
           <TabsList
             className={
-              "z-50 fixed bottom-3 grid grid-cols-2 w-full max-w-2xl dark:bg-slate-800 border dark:border-cyan-500 bg-white border-cyan-500 mx-auto"
+              "z-50 fixed bottom-3 grid grid-cols-3 w-full max-w-2xl dark:bg-slate-800 border dark:border-cyan-500 bg-white border-cyan-500 mx-auto"
             }>
             <div className="absolute inset-0 bg-noise rounded-md"></div>
 
+            <TabsTrigger value="presentation" className={tabStyles}>
+              <WalletCardsIcon className="h-4 w-4 mr-2" />
+              Presentation
+            </TabsTrigger>
             <TabsTrigger value="rules" className={tabStyles}>
               <BookIcon className="h-4 w-4 mr-2" />
               Rules
@@ -42,6 +46,20 @@ export default function GameCompanion() {
               Cards
             </TabsTrigger>
           </TabsList>
+
+          {/* PRESENTATION */}
+          {/* PRESENTATION */}
+          {/* PRESENTATION */}
+
+          <TabsContent value="presentation" className="space-y-4">
+            <Article className={cardStyles}>
+              <ArticleContent className="space-y-4 p-6 relative">
+                <video className="w-full rounded-md" controls>
+                  <source src="/assets/video/presentation.mp4" type="video/mp4" />
+                </video>
+              </ArticleContent>
+            </Article>
+          </TabsContent>
 
           {/* RULES */}
           {/* RULES */}

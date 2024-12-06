@@ -32,6 +32,19 @@
     --ressource-500: #035900;
     --ressource-600: #025900;
     --main-blue-o400: rgb(6, 182, 212, 0.4);
+
+    animation: sync;
+    animation-timeline: scroll();
+    counter-reset: p var(--p);
+  }
+
+  @keyframes sync {
+    to {
+      --p: 100;
+    }
+  }
+  .p::before {
+    content: counter(p) "%";
   }
 
   .dark {
