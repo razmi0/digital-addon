@@ -51,9 +51,9 @@ export default function Players() {
             <TableHead>Name</TableHead>
             <TableHead>Score</TableHead>
             <TableHead>Infras</TableHead>
-            <TableHead>Resources</TableHead>
+            <TableHead>Resources spended</TableHead>
             <TableHead>Actions</TableHead>
-            <TableHead>Actions</TableHead>
+            <TableHead></TableHead>
           </TableRow>
         </TableHeader>
         <TableBody>

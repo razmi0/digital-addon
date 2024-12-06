@@ -76,7 +76,10 @@ export default function GameCompanion() {
 
           <TabsContent value="cards" className="space-y-4">
             <p className="dark:text-cyan-600 text-cyan-700 my-10">
-              Here you will find all the cards available in the game. Click on a card to add it to a player.
+              Here you will find all the cards available in the game. <br />
+              Add all players and cards to their inventory.
+              <br />
+              You'll be able to directly have access to stats and the score of each player.
             </p>
 
             {/* PLAYERS */}
