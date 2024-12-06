@@ -9,12 +9,10 @@ export default function Header() {
       <div
         className={cn(
           "absolute inset-0 bg-cover bg-center opacity-30",
-          theme === "dark"
-            ? 'bg-[url("/placeholder.svg?height=400&width=800")]'
-            : 'bg-[url("/placeholder.svg?height=400&width=800&text=Light%20Mode")]'
+          'bg-[url("/placeholder.svg?height=400&width=800&text=Light%20Mode")] dark:bg-[url("/placeholder.svg?height=400&width=800")]'
         )}
       />
-      <div className={cn("absolute inset-0", theme === "dark" ? "bg-cyan-500/40" : "bg-cyan-500/5")} />
+      <div className="absolute inset-0 bg-cyan-500/5 dark:bg-cyan-500/40" />
       <div
         className="absolute inset-0"
         style={{
@@ -25,17 +23,10 @@ export default function Header() {
         }}
       />
       <div className="relative flex flex-wrap items-center justify-center h-full">
-        <h1
-          className={cn(
-            "text-4xl md:text-5xl font-bold text-center px-4",
-            theme === "dark" ? "drop-shadow-glow text-white" : "text-slate-800"
-          )}>
+        <img src="/assets/logo.png" alt="My DigiTown logo" className="h-64 md:h-72" />
+        <h1 className="text-4xl md:text-5xl font-bold text-center px-4 text-slate-800 dark:drop-shadow-glow dark:text-white">
           My DigiTown
-          <span
-            className={cn(
-              "block text-lg md:text-xl mt-2 font-normal",
-              theme === "dark" ? "text-cyan-400" : "text-cyan-600"
-            )}>
+          <span className="block text-lg md:text-xl mt-2 font-normal text-cyan-600 dark:text-cyan-400">
             Digital Game Companion
           </span>
         </h1>

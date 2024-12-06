@@ -1,7 +1,7 @@
 import { Card as Article, CardContent as ArticleContent } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { cn } from "@/lib/utils";
-import { BookIcon, ScrollIcon, WalletCardsIcon } from "lucide-react";
+import { BookIcon, WalletCardsIcon } from "lucide-react";
 import Card, { CardType } from "./components/Card";
 import Header from "./components/Header";
 import Players from "./components/Players";
@@ -26,12 +26,12 @@ export default function GameCompanion() {
       <ThemeButton />
       {/* Main Content */}
       <main className="container mx-auto p-4 relative">
-        <Tabs defaultValue="rules" className="space-y-6">
+        <Tabs defaultValue="rules" className="space-y-6 flex justify-center">
           <TabsList
             className={
-              "grid grid-cols-3 w-full max-w-2xl mx-auto dark:bg-slate-800/50 border dark:border-cyan-500/20 bg-white/50 border-cyan-500/40 relative"
+              "z-50 fixed bottom-3 grid grid-cols-2 w-full max-w-2xl dark:bg-slate-800 border dark:border-cyan-500 bg-white border-cyan-500 mx-auto"
             }>
-            <div className="absolute inset-0 bg-noise"></div>
+            <div className="absolute inset-0 bg-noise rounded-md"></div>
 
             <TabsTrigger value="rules" className={tabStyles}>
               <BookIcon className="h-4 w-4 mr-2" />
@@ -40,11 +40,6 @@ export default function GameCompanion() {
             <TabsTrigger value="cards" className={tabStyles}>
               <WalletCardsIcon className="h-4 w-4 mr-2" />
               Cards
-            </TabsTrigger>
-
-            <TabsTrigger value="players" className={tabStyles}>
-              <ScrollIcon className="h-4 w-4 mr-2" />
-              Players
             </TabsTrigger>
           </TabsList>
 
@@ -61,14 +56,26 @@ export default function GameCompanion() {
             </Article>
           </TabsContent>
 
-          {/* CARDS */}
-          {/* CARDS */}
-          {/* CARDS */}
-
           <TabsContent value="cards" className="space-y-4">
             <p className="dark:text-cyan-600 text-cyan-700 my-10">
               Here you will find all the cards available in the game. Click on a card to add it to a player.
             </p>
+
+            {/* PLAYERS */}
+            {/* PLAYERS */}
+            {/* PLAYERS */}
+
+            <Article className={cardStyles}>
+              <ArticleContent className="p-6 relative">
+                <div className="absolute inset-0 bg-noise"></div>
+                <Players />
+              </ArticleContent>
+            </Article>
+
+            {/* CARDS */}
+            {/* CARDS */}
+            {/* CARDS */}
+
             <Article className={cardStyles}>
               <ArticleContent className="p-6 relative">
                 <div className="absolute inset-0 bg-noise"></div>
@@ -78,19 +85,6 @@ export default function GameCompanion() {
                     <Card key={i} content={card} />
                   ))}
                 </div>
-              </ArticleContent>
-            </Article>
-          </TabsContent>
-
-          {/* PLAYERS */}
-          {/* PLAYERS */}
-          {/* PLAYERS */}
-
-          <TabsContent value="players" className="space-y-4">
-            <Article className={cardStyles}>
-              <ArticleContent className="p-6 relative">
-                <div className="absolute inset-0 bg-noise"></div>
-                <Players />
               </ArticleContent>
             </Article>
           </TabsContent>

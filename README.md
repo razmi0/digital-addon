@@ -171,3 +171,10 @@ The oldest player starts.
 - [ ] draw only infra cards !
 
 ## video script
+
+- [ ] : construction logo ( 0 => 3)
+- [ ] : défielemnt des carte ( 3 => 11s)
+- [ ] : explication addon ( 10s => 19s)
+- [ ] : explication carte en main / addon ( 19s => 50s)
+- [ ] : olivia qui va gagner (50s => 53s)
+- [ ] : final : logo + site (53s => 1m)

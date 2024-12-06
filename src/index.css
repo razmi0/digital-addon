@@ -31,6 +31,7 @@
     --action-600: #1f3f3f;
     --ressource-500: #035900;
     --ressource-600: #025900;
+    --main-blue-o400: rgb(6, 182, 212, 0.4);
   }
 
   .dark {
@@ -55,6 +56,9 @@
     --ring: 224.3 76.3% 48%;
   }
 }
+::selection {
+  background-color: var(--main-blue-o400);
+}
 
 @layer utilities {
   .drop-shadow-glow {
@@ -64,7 +68,7 @@
 
 .bg-noise {
   background-image: url("/assets/noise.svg"); /* Path to the noise image */
-  opacity: 1; /* Adjust the intensity of the noise */
+  opacity: 1s; /* Adjust the intensity of the noise */
   mix-blend-mode: overlay; /* Blends the noise with the gradient */
   pointer-events: none; /* Ensures it doesn't interfere with user interaction */
 }

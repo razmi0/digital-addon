@@ -16,9 +16,7 @@ export default function ThemeButton() {
         onClick={toggleTheme}
         className={cn(
           "rounded-full",
-          theme === "dark"
-            ? "bg-slate-800 text-yellow-400 hover:bg-slate-700"
-            : "bg-white text-slate-800 hover:bg-slate-100"
+          "dark:bg-slate-800 dark:text-white dark:hover:bg-slate-700 bg-white text-slate-800 hover:bg-slate-100"
         )}>
         {theme === "dark" ? <Sun className="h-[1.2rem] w-[1.2rem]" /> : <Moon className="h-[1.2rem] w-[1.2rem]" />}
         <span className="sr-only">Toggle theme</span>
